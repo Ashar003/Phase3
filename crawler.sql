@@ -7,6 +7,12 @@
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
+/*Database Template for Crawler using phpMyAdmin
+
+Potential Issues:
+timeToIndex, timeToSearch need to be tracked in seconds, will be stored in tables as INT values
+Foreign keys for page_word: pageID and wordID are set.*/
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
@@ -17,6 +23,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
+
 
 --
 -- Database: `crawler`
